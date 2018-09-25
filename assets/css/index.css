@@ -1,3 +1,9 @@
+
+.carrossel .w-100 {
+    width: 100% !important;
+    height: 400px;
+}
+
 .nav-categorias {
     list-style-type: none;
     margin: 0;
@@ -29,17 +35,8 @@
     text-decoration: none;    
 }
 
-.nav-categorias li a:hover:not(.active) {
-    background-color: #b52020;
-}
-
 .nav-categorias li a:hover {
     background-color: #ab3131;
-    color: white;
-}
-
-.active {
-    background-color: #b52020;
     color: white;
 }
 
