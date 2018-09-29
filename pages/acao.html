@@ -5,57 +5,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Filmes de Ação</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="./index.html">Início</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Lançamentos <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="acao.html">Ação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Aventura</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Drama</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="terror.html">Terror</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-                    </form>
+            <nav class="site-header sticky-top py-1">
+                <div class="container d-flex flex-column flex-md-row justify-content-between">
+                    <a class="py-2" href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                        </svg>
+                    </a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Lançamentos</a>
+                    <a class="py-2 d-none d-md-inline-block" href="../pages/acao.html">Ação</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Aventura</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Drama</a>
+                    <a class="py-2 d-none d-md-inline-block" href="../pages/terror.html">Terror</a>
                 </div>
             </nav>
         </header>
-        <div class="container">
+        <main class="container">
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">LOGAN <span class="text-muted">Ação, Ficção científica</span></h2>
+                    <h4 class="featurette-heading">Data de lançamento: <span class="text-muted">2 de março de 2017 (2h 17min)</span></h4>
+                    <h4 class="featurette-heading">Direção: <span class="text-muted">James Mangold</span></h4>
+                    <p class="lead">Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). 
+                        Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), 
+                        uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). 
+                        Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), 
+                        interessado na menina.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/logan.jpg" data-holder-rendered="true">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/logan.jpg" data-holder-rendered="true">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">LOGAN <span class="text-muted">Ação, Ficção científica</span></h2>
+                    <p class="lead">Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). 
+                        Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), 
+                        uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). 
+                        Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), 
+                        interessado na menina.
+                    </p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+
+
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">                 
@@ -153,5 +165,60 @@
                 </div>
             </div>
         </main>
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                    <small class="d-block mb-3 text-muted">© 2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Site</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="pages/acao.html">Lançamentos</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Ação</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Aventura</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Drama</a></li>
+                        <li><a class="text-muted" href="pages/terror.html">Terror</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Horário</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Durante a semana</a></li>
+                        <li><a class="text-muted" href="#">das 10 as 14 hrs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Endereço</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">R: João Manuel, 98</a></li>
+                        <li><a class="text-muted" href="#">CEP: 89898-000</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Sobre nós</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Telefone de Contato</a></li>
+                        <li><a class="text-muted" href="#">(47)99999-9999</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
     </body>
 </html>

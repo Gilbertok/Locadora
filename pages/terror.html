@@ -1,82 +1,93 @@
+<!DOCTYPE html>
 <html>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Filmes de Ação</title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
+    </head>
     <body>
-        <header class="search panel">
-            <section>
-                <form>
-                    <input class="input-search" type="text" placeholder="Pesquisar...">
-                    <button type="submit">Pesquisar</button>
-                </form>
-            </section>
+        <header>
+            <nav class="site-header sticky-top py-1">
+                <div class="container d-flex flex-column flex-md-row justify-content-between">
+                    <a class="py-2" href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                        </svg>
+                    </a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Lançamentos</a>
+                    <a class="py-2 d-none d-md-inline-block" href="../pages/acao.html">Ação</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Aventura</a>
+                    <a class="py-2 d-none d-md-inline-block" href="#">Drama</a>
+                    <a class="py-2 d-none d-md-inline-block" href="../pages/terror.html">Terror</a>
+                </div>
+            </nav>
         </header>
-
-        <a href="index.html">Principal</a>
-
-        <main class="panel">
-            <section class="card">
-                <section>
-                    <figure>
-                        <img class="filme-cartaz" width="150px" height="150px" src="./assets/img/orfa.jpg" alt="">
-                    </figure>
-                    <h2 class="filme-nome">A Orfã</h2>
-                </section>
-                <section class="social">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="https://www.youtube.com/watch?v=fDzxcRDdyKc" target="_blank">
-                                    <img width="42px" height="42px" src="./assets/img/youtube.jpg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
-            </section>
-            <hr class="divider">
-
-            <section class="card">
-                <section>
-                    <figure>
-                        <img class="filme-cartaz" width="150px" height="150px" src="./assets/img/caseiro.jpg" alt="">
-                    </figure>
-                    <h2 class="filme-nome">O Caseiro</h2>
-                </section>
-                <section class="social">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="https://www.youtube.com/watch?v=nirWY0bo6qk" target="_blank">
-                                    <img width="42px" height="42px" src="./assets/img/youtube.jpg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
-            </section>
-
-            <hr class="divider">
-
-            <section class="card">
-                    <section>
-                        <figure>
-                            <img class="filme-cartaz" width="150px" height="150px" src="./assets/img/acampamento.jpg" alt="">
-                        </figure>
-                        <h2 class="filme-nome">O Acampamento</h2>
-                    </section>
-                    <section class="social">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="https://www.youtube.com/watch?v=5-_wIaTtsLM&t=1s" target="_blank">
-                                        <img width="42px" height="42px" src="./assets/img/youtube.jpg" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </section>
-                <hr class="divider">
+        <main class="container">
 
         </main>
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                    </svg>
+                    <small class="d-block mb-3 text-muted">© 2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Site</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="pages/acao.html">Lançamentos</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Ação</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Aventura</a></li>
+                        <li><a class="text-muted" href="pages/acao.html">Drama</a></li>
+                        <li><a class="text-muted" href="pages/terror.html">Terror</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Horário</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Durante a semana</a></li>
+                        <li><a class="text-muted" href="#">das 10 as 14 hrs</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Endereço</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">R: João Manuel, 98</a></li>
+                        <li><a class="text-muted" href="#">CEP: 89898-000</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Sobre nós</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Telefone de Contato</a></li>
+                        <li><a class="text-muted" href="#">(47)99999-9999</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
     </body>
 </html>
