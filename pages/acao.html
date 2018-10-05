@@ -46,29 +46,8 @@
                         <br>
                         <br>
                         <br>
-                        <div class="container">
-                            <!-- Trigger the modal with a button -->
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#trailer">Assistir Trailer</button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="trailer" role="dialog">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">O ACORDO</h4>
-                                        </div>
-                                        <div id="video">
-                                            <video width="500" height="340" controls>
-                                                <source src="../Locadora/assets/videos/oacordo.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#trailer_o_acordo">Assistir Trailer</button>
+                            
                     </p>
                 </div>
                 <div class="col-md-5">
@@ -103,13 +82,13 @@
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/acao4.jpg" data-holder-rendered="true">
+                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/Acao/acordo.jpg" data-holder-rendered="true">
                 </div>
             </div>
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/logan.jpg" data-holder-rendered="true">
+                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="../assets/img/Acao/logan.jpg" data-holder-rendered="true">
                 </div>
                 <div class="col-md-7">
                     <h2 class="featurette-heading">LOGAN <span class="text-muted">Ação, Ficção científica</span></h2>
@@ -121,32 +100,16 @@
                         <br>
                         <br>
                         <br>
-                        <div class="container">
                         <!-- Trigger the modal with a button -->
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#trailer">Assistir Trailer</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="trailer" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">LOGAN</h4>
-                                    </div>
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe width="420" height="315"
-                                            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0">
-                                            </iframe>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </p>
                 </div>
             </div>
             <hr class="featurette-divider"> 
+
+
+            
+            
         </main>
 
 
@@ -200,10 +163,48 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
-        <script type="text/javascript" src="assets/js/popper.min.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-        <script type="text/javascript" src="assets/js/index.js"></script>
+        <!-- Modal -->
+        <div class="modal fade" id="trailer_logan" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">LOGAN</h4>
+                        <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="trailer_o_acordo" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content-video-locadora">
+                    <div class="modal-header-video-locadora">
+                        <h4 class="modal-title">O ACORDO</h4>
+                        <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div id="video">
+                        <video class="video-source" controls>
+                            <source src="../assets/videos/oacordo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="modal-footer-video-locadora">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="../assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="../assets/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="../assets/js/index.js"></script>
     </body>
 </html>
