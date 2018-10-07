@@ -5000,6 +5000,19 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
 .page-link {
   position: relative;
   display: block;
