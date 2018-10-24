@@ -81,6 +81,9 @@
     width: 100%
 }
 
-.footer-locadora {
-    background-color: #f2f2f3;
+.footer-locadora {}
+
+.breadcrumb {
+    margin-top: 15px;
+    margin-bottom: 30px;
 }

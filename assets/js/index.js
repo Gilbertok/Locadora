@@ -3,9 +3,11 @@ $('.carousel').carousel({
 })
 
 $('.modal').on('hidden.bs.modal', function () {
-    $('video').get(0).pause();
+    video = $(this).closest("div").find('video')[0];
+    video.pause();
+    video.currentTime = 0;
 })
 
 $('.modal').on('shown.bs.modal', function () {
-    $('video').get(0).play();
-  })
+    $(this).closest("div").find('video')[0].play();
+})
