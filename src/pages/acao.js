@@ -45,13 +45,31 @@ var filmes = [
         dataTarget: 'trailer_dupla_explosiva',
         linkFilme: ''
     },{
-        titulo: ' ',
-        conteudo: '',
-        dataLancamento: '',
-        direcao: '',
-        sinopse: '',
-        linkImagem: '',
-        dataTarget: '',
+        titulo: 'ALEM DA ESCURIDÃO',
+        conteudo: 'Ação, Ficção científica',
+        dataLancamento: '2012 (1h 36min)',
+        direcao: 'Martin Guigui',
+        sinopse: 'Em uma cidade pequena onde todos se conhecem, há rumores de que a casa de um dos moradores é assombrada. Quando um grupo de jovens decide investigar, são surpreendidos por Ely (Dennis Quaid), o proprietário, que mata um deles. Logo, os outros tentam provar o crime mas como Ely é um cidadão respeitado na cidade, ninguém acredita neles e o homem passa a persegui-los. Como eles poderão revelar que há um psicopata à espreita? ',
+        linkImagem: 'Acao/escuridao',
+        dataTarget: 'trailer_alem_da_escuridao',
+        linkFilme: ''
+    },{
+        titulo: 'THE FOREIGNER',
+        conteudo: 'Ação',
+        dataLancamento: '11 de janeiro de 2018 (1h 54min)',
+        direcao: 'Martin Campbell',
+        sinopse: 'Quan (Jackie Chan) é dono de um típico restaurantes chinês em Londres, capital da Inglaterra. Após um misterioso ataque de um grupo de terroristas irlandeses ao seu estabelecimento, ele tem sua vida e família devastadas. Sem muito apoio da polícia local, ele vai buscar vingança com suas próprias mãos.',
+        linkImagem: 'Acao/foreigner',
+        dataTarget: 'trailer_the_forigner',
+        linkFilme: ''
+    },{
+        titulo: 'LINHA DE AÇÃO',
+        conteudo: 'Ação, Policial, Suspense',
+        dataLancamento: '15 de março de 2013 (1h 49min))',
+        direcao: 'Allen Hughes',
+        sinopse: 'Um ex-policial é envolvido em um escândalo após ser chamado pelo prefeito de Nova York para seguir a esposa do político que desconfia de infidelidade da mulher. Ao perceber que foi enganado, o detetive sai em busca de justiça.',
+        linkImagem: 'Acao/linhaacao',
+        dataTarget: '#trailer_linha_de_acao',
         linkFilme: ''
     }
 ];
