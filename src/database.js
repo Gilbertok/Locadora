@@ -1,8 +1,8 @@
-var senhaDoBanco = 'locadora.filmes';
-var resumesList = JSON.parse(localStorage.getItem(senhaDoBanco)) || [];
+var senhaDoBancoUser = 'locadora.users';
+var resumesList = JSON.parse(localStorage.getItem(senhaDoBancoUser)) || [];
 
 Resume = {};
-Resume.get = function(searchTerm, advancedFilter) {
+Resume.getUser = function(searchTerm, advancedFilter) {
     advancedFilter = advancedFilter || {};
     return resumesList.filter(function(resume) {
         return resume.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -13,7 +13,7 @@ Resume.get = function(searchTerm, advancedFilter) {
     });
 }
 
-Resume.add = function(resume) {
+Resume.addUser = function(resume) {
     resumesList.push(resume);
-    localStorage.setItem(senhaDoBanco, JSON.stringify(resumesList) );
+    localStorage.setItem(senhaDoBancoUser, JSON.stringify(resumesList) );
 }
