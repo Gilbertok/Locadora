@@ -87,3 +87,10 @@
     margin-top: 15px;
     margin-bottom: 30px;
 }
+
+.loadGif {
+    height: 40em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
