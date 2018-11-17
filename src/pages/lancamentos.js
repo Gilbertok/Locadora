@@ -19,4 +19,4 @@ var filmes = [
     }
 ];
 
-window.onload = carregarFilmes(filmes);
+window.onload = IndexJS.carregarFilmes(filmes);

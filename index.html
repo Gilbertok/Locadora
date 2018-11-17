@@ -64,18 +64,10 @@
             </div>
         </header>
         <main class="container">
-            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-4">Faça login</h1>
-                <p class="lead">Trabalhamos com locação de filmes e venda de planos de streaming.</p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#modal_cadastro">Criar Cadastro</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-lg btn-block btn-dark" data-toggle="modal" data-target="#modal_login">Logar</button>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col-md-12" id="index-menu"></div>  
             </div>
+            
             <div class="row">
                 <div class="col-md-3">
                     <div class="card mb-3 shadow-sm">
@@ -323,7 +315,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Entrar</button>
+                        <button type="button" id="login" class="btn btn-success" data-dismiss="modal">Entrar</button>
                     </div>
                 </div>
             </div>
@@ -333,8 +325,8 @@
         <script type="text/javascript" src="src/componentes/popper.min.js"></script>
         <script type="text/javascript" src="src/componentes/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="src/componentes/bootstrap.js"></script>
-        <script type="text/javascript" src="src/index.js"></script>
         <script type="text/javascript" src="src/database.js"></script>
         <script type="text/javascript" src="src/user.js"></script>
+        <script type="text/javascript" src="src/index.js"></script>
     </body>
 </html>
