@@ -20,10 +20,13 @@ $('.modal').on('shown.bs.modal', function () {
 IndexJS = {};
 
 IndexJS.carregarMenu = function (params) {
+    var indexCarrossel = document.getElementById('index-carrossel');
     var indexMenu = document.getElementById('index-menu');
     var menu = '';
+    var carrousel = '';
     var user = DataBase.verificaUsuarioLogado();
-    if (user.nome != undefined) {
+    // caso esteja logado
+    if (user != undefined) {
         menu = `<div class="jumbotron">
                     <h1 class="display-3">Bem vindo, ${user.nome}</h1>
                     <hr class="my-4">
@@ -85,6 +88,34 @@ IndexJS.carregarMenu = function (params) {
                     </div>
                 </div>`;
     } else {
+        carrousel = `<div class="carrossel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100 img-responsive" src="assets/img/imagem1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100 img-responsive" src="assets/img//imagem2.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100 img-responsive" src="assets/img/imagem3.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>`;
         menu = `<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                     <h1 class="display-4">Faça login</h1>
                     <p class="lead">Trabalhamos com locação de filmes e venda de planos de streaming.</p>
@@ -98,11 +129,11 @@ IndexJS.carregarMenu = function (params) {
                     </div>
                 </div>`;
     }
+    indexCarrossel.innerHTML = carrousel;
     indexMenu.innerHTML = menu;
 }
 
 IndexJS.carregarFilmes = function (filmes) {
-
     var main = document.getElementById('pages');
     var paginas = '';
     var pag = 1;
