@@ -1,5 +1,4 @@
 
-
 $("#salvarUsuario").click(function() {
     var nome = document.getElementById("cadastroUsuario").value;
     var email = document.getElementById("cadastroEmail").value;
@@ -13,5 +12,16 @@ $("#salvarUsuario").click(function() {
         password: password
     }
 
-    Resume.addUser(user);
+    DataBase.addUser(user);
 });
+
+$("#login").click(function() {
+    var usuario = document.getElementById("loginUsuario").value;
+    var senha = document.getElementById("loginSenha").value;
+    user = DataBase.validaLogin(usuario, senha);
+    if(user != undefined) {
+        DataBase.login(user);
+        location.reload();
+    }
+});
+
