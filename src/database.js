@@ -24,10 +24,14 @@ DataBase.login = function(login) {
     localStorage.setItem(baseLogin, JSON.stringify(login));
 }
 
+DataBase.logoff = function() {
+    localStorage.setItem(baseLogin, JSON.stringify({}));
+}
+
 DataBase.validaLogin = function(usuario, senha) {
-    var userLogin = {};
+    var userLogin = undefined;
     usersList.forEach(user => {
-        if (user.nome.toLowerCase() === usuario.toLowerCase() && user.password.toLowerCase() === senha.toLowerCase()) {
+        if (user.username.toLowerCase() === usuario.toLowerCase() && user.password.toLowerCase() === senha.toLowerCase()) {
             userLogin = user;
         }
     });
