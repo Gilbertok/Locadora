@@ -17,7 +17,129 @@ $('.modal').on('shown.bs.modal', function () {
     }
 })
 
+function logoff() {
+    DataBase.logoff();
+    location.reload();
+}
+
+
 IndexJS = {};
+
+IndexJS.messageError = function(message) {
+    iziToast.show({
+        id: null, 
+        class: '',
+        titleColor: '',
+        titleSize: '',
+        titleLineHeight: '',
+        messageColor: '',
+        messageSize: '',
+        messageLineHeight: '',
+        backgroundColor: '',
+        icon: '',
+        iconText: '',
+        iconColor: '',
+        iconUrl: null,
+        image: '',
+        imageWidth: 50,
+        maxWidth: null,
+        zindex: null,
+        layout: 1,
+        balloon: false,
+        close: true,
+        closeOnEscape: false,
+        closeOnClick: false,
+        displayMode: 0, // once, replace
+        target: '',
+        targetFirst: true,
+        rtl: false,
+        animateInside: true,
+        pauseOnHover: true,
+        resetOnHover: false,
+        progressBarColor: '',
+        progressBarEasing: 'linear',
+        overlay: false,
+        overlayClose: false,
+        overlayColor: 'rgba(0, 0, 0, 0.6)',
+        transitionIn: 'fadeInUp',
+        transitionOut: 'fadeOut',
+        transitionInMobile: 'fadeInUp',
+        transitionOutMobile: 'fadeOutDown',
+        buttons: {},
+        inputs: {},
+        onOpening: function () {},
+        onOpened: function () {},
+        onClosing: function () {},
+        onClosed: function () {},
+        drag: false,
+        progressBar: false,
+        timeout: 0,
+        theme: 'light', // dark
+        color: 'yellow', // blue, red, green, yellow
+        position: 'topLeft', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+
+        title: 'Atenção',
+        message: message
+    });
+}
+
+IndexJS.messageSuccesso = function(message) {
+    iziToast.show({
+        id: null, 
+        class: '',
+        titleColor: '',
+        titleSize: '',
+        titleLineHeight: '',
+        messageColor: '',
+        messageSize: '',
+        messageLineHeight: '',
+        backgroundColor: '',
+        icon: '',
+        iconText: '',
+        iconColor: '',
+        iconUrl: null,
+        image: '',
+        imageWidth: 50,
+        maxWidth: null,
+        zindex: null,
+        layout: 1,
+        balloon: false,
+        close: true,
+        closeOnEscape: false,
+        closeOnClick: false,
+        displayMode: 0, // once, replace
+        target: '',
+        targetFirst: true,
+        timeout: 5000,
+        rtl: false,
+        animateInside: true,
+        pauseOnHover: true,
+        resetOnHover: false,
+        progressBarColor: '',
+        progressBarEasing: 'linear',
+        overlay: false,
+        overlayClose: false,
+        overlayColor: 'rgba(0, 0, 0, 0.6)',
+        transitionIn: 'fadeInUp',
+        transitionOut: 'fadeOut',
+        transitionInMobile: 'fadeInUp',
+        transitionOutMobile: 'fadeOutDown',
+        buttons: {},
+        inputs: {},
+        onOpening: function () {},
+        onOpened: function () {},
+        onClosing: function () {},
+        onClosed: function () {},
+        drag: false,
+        progressBar: false,
+        theme: 'light', // dark
+        color: 'green', // blue, red, green, yellow
+        position: 'topLeft', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+
+        title: 'Sucesso!',
+        message: message
+    });
+}
 
 IndexJS.carregarMenu = function (params) {
     var indexCarrossel = document.getElementById('index-carrossel');
@@ -29,44 +151,25 @@ IndexJS.carregarMenu = function (params) {
     if (user != undefined) {
         menu = `<div class="jumbotron">
                     <h1 class="display-3">Bem vindo, ${user.nome}</h1>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="card mb-3">
-                            <h3 class="card-header">Card header</h3>
+                            <h3 class="card-header">Dados da conta</h3>
                             <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <h5 class="card-title">Special title treatment</h5>
+                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                             </div>
-                            <img style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
                             <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
                             </ul>
-                            <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                            </div>
                             <div class="card-footer text-muted">
-                            2 days ago
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                                Ultimo login, 2 dias atrás
                             </div>
                         </div>
                     </div>
@@ -85,6 +188,9 @@ IndexJS.carregarMenu = function (params) {
                                 <span class="badge badge-primary badge-pill">2</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" id="logoff" onclick="logoff()" class="btn btn-danger">Logoff</button>
                     </div>
                 </div>`;
     } else {
@@ -128,9 +234,64 @@ IndexJS.carregarMenu = function (params) {
                         </div>
                     </div>
                 </div>`;
+                menu+=`<div class="row">${IndexJS.getCardFilmes()}</div>`;
     }
     indexCarrossel.innerHTML = carrousel;
     indexMenu.innerHTML = menu;
+}
+
+IndexJS.getCardFilmes = function () {
+    var capas = [
+        {
+            linkImagem: 'Acao/logan.jpg'
+        },
+        {
+            linkImagem: 'Acao/desejodematar.jpg'
+        },
+        {
+            linkImagem: 'Acao/passageiro.jpg'
+        },
+        {
+            linkImagem: 'Acao/duplaexplosiva.jpg'
+        },
+        {
+            linkImagem: 'Acao/escuridao.jpg'
+        },
+        {
+            linkImagem: 'Acao/foreigner.jpg'
+        },
+        {
+            linkImagem: 'Acao/linhaacao.jpg'
+        },{
+            linkImagem: 'Aventura/aventuravingadores.jpg'
+        },
+        {
+            linkImagem: 'Aventura/hansolo.jpg'
+        },
+        {
+            linkImagem: 'Drama/umaquestaopessoal.jpg'
+        },
+        {
+            linkImagem: 'Aventura/comotreinardragao.jpg'
+        },
+        {
+            linkImagem: 'Acao/passageiro.jpg'
+        }
+    ]
+    
+    var corpo = '';
+    capas.forEach(capa => {
+        corpo+=`<div class="col-md-3">
+                    <div class="card mb-3 shadow-sm">
+                        <img class="card-img-top" 
+                            data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" 
+                            style="height: 225px; width: 100%; display: block;" 
+                            src="./assets/img/${capa.linkImagem}" 
+                            data-holder-rendered="true">
+                    </div>
+                </div>`
+    });
+    return corpo;
 }
 
 IndexJS.carregarFilmes = function (filmes) {

@@ -1,7 +1,7 @@
 
 var filmes = [
     {
-        titulo: 'UMA QUESTÃO PESSOAL',
+        titulo: 'UMA QUESTÃO PESSOAL ',
         conteudo: 'Drama, Guerra',
         direcao: 'Paolo Taviani, Vittorio Taviani',
         dataLancamento: '20 de setembro de 2018 (1h 25min)',
@@ -9,7 +9,7 @@ var filmes = [
         linkImagem: 'Drama/umaquestaopessoal.jpg',
         linkFilme: ''
     },{
-        titulo: 'O PASSAGEIRO',
+        titulo: 'O PASSAGEIRO ',
         conteudo: 'Suspense, Ação',
         direcao: 'Jaume Collet-Serra',
         dataLancamento: '8 de março de 2018 (1h 44min)',
