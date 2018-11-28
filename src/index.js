@@ -157,16 +157,19 @@ IndexJS.carregarMenu = function (params) {
                         <div class="card mb-3">
                             <h3 class="card-header">Dados da conta</h3>
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <h5 class="card-title">Usuario</h5>
+                                <h6 class="card-subtitle text-muted">${user.username}</h6>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title">E-mail</h5>
+                                <h6 class="card-subtitle text-muted">${user.email}</h6>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item">
+                                    <button type="button" id="logoff" onclick="logoff()" class="btn btn-info">Cadastrar um filme</button>
+                                    <button type="button" id="logoff" onclick="logoff()" class="btn btn-info">Alterar Senha</button>
+                                    <button type="button" id="logoff" onclick="logoff()" class="btn btn-danger fa-pull-right">Logoff</button>
+                                </li>
                             </ul>
                             <div class="card-footer text-muted">
                                 Ultimo login, 2 dias atrás
@@ -188,9 +191,6 @@ IndexJS.carregarMenu = function (params) {
                                 <span class="badge badge-primary badge-pill">2</span>
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" id="logoff" onclick="logoff()" class="btn btn-danger">Logoff</button>
                     </div>
                 </div>`;
     } else {
