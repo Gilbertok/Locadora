@@ -3,17 +3,18 @@ $('.carousel').carousel({
 })
 
 $('.modal').on('hidden.bs.modal', function () {
+    console.log($(this))
+
     video = $(this).closest("div").find('video')[0];
-
-    console.log(video);
-
     if(video != undefined) {
         video.pause();
         video.currentTime = 0;
     }
-})
+});
 
 $('.modal').on('shown.bs.modal', function () {
+    console.log($(this))
+
     video = $(this).closest("div").find('video')[0];
     if(video != undefined) {
         video.play();
@@ -55,6 +56,23 @@ function alterarSenha() {
     var senhaAtual = document.getElementById("loginSenhaAtual").value;
     var senhaNova = document.getElementById("loginSenhaNova").value;
     UserJs.alterarSenha(senhaAtual, senhaNova);
+}
+
+function openModal(idModal) {
+    console.log(idModal)
+
+    video = $(idModal).find('video')[0];
+    if(video != undefined) {
+        video.play();
+    }
+}
+
+function closeModal(idModal) {
+    video = $(idModal).find('video')[0];
+    if(video != undefined) {
+        video.pause();
+        video.currentTime = 0;
+    }
 }
 
 IndexJS = {};
@@ -347,7 +365,7 @@ IndexJS.carregarFilmes = function (filmes) {
                             <p class="lead">${filme.sinopse}
                                 <br>
                                 <br>
-                                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#${filme.dataTarget}">
+                                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#${filme.dataTarget}" onclick="openModal(${filme.dataTarget})">
                                     <i class="fas fa-play-circle"></i>
                                         Assistir Trailer
                                 </button>
@@ -380,21 +398,22 @@ IndexJS.carregarFilmes = function (filmes) {
                             <p class="lead">${filme.sinopse}
                                 <br>
                                 <br>
-                                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#${filme.dataTarget}">
+                                <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#${filme.dataTarget}" onclick="openModal(${filme.dataTarget})">
                                     <i class="fas fa-play-circle"></i>
                                         Assistir Trailer
                                 </button>
                             </p>
                         </div>
                     </div>
-                    <hr class="featurette-divider">`
+                    <hr class="featurette-divider">`;
         }
+        pag++
         modaisTemplate+=`<div class="modal fade" id="${filme.dataTarget}" role="dialog">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content-video-locadora">
                                     <div class="modal-header-video-locadora">
                                         <h4 class="modal-title">${filme.titulo}</h4>
-                                        <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+                                        <button type="button" class="close pull-left" data-dismiss="modal" onclick="closeModal(${filme.dataTarget})">&times;</button>
                                     </div>
                                     <div id="video">
                                         <video class="video-source" controls>
@@ -402,24 +421,24 @@ IndexJS.carregarFilmes = function (filmes) {
                                         </video>
                                     </div>
                                     <div class="modal-footer-video-locadora">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="closeModal(${filme.dataTarget})">Fechar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>`;
-
-        pag++
     });
 
-    pages.innerHTML = `<div class="row loadGif">
-                        <img src="../assets/img/loader2.gif" style="width: 400px; height: 400px;" alt="Banner" />
-                    </div>`
-
-    setTimeout(function(){
-            pages.innerHTML = paginasTemplate + modaisTemplate;
-        }, 
-        1500
-    )
+    if (pages!=undefined) {
+        pages.innerHTML = `<div class="row loadGif">
+                            <img src="../assets/img/loader2.gif" style="width: 400px; height: 400px;" alt="Banner" />
+                        </div>`
+    
+        setTimeout(function(){
+                pages.innerHTML = paginasTemplate + modaisTemplate;
+            }, 
+            1500
+        )
+    }
 }
 
 window.onload = IndexJS.carregarMenu();
