@@ -16,6 +16,22 @@ var filmes = [
         sinopse: 'Durante o seu trajeto usual de volta para casa, um vendedor de seguros (Liam Neeson) é forçado por uma estranha misteriosa (Vera Farmiga) a descobrir a identidade de um dos passageiros do trem em que se encontra antes da última parada. Com a rotina quebrada, o homem se encontra no meio de uma conspiração criminosa. ',
         linkImagem: 'Acao/passageiro.jpg',
         linkFilme: ''
+    },{
+        titulo: 'DESEJO DE MATAR ',
+        conteudo: 'Ação',
+        direcao: 'Eli Roth',
+        dataLancamento: '10 de maio de 2018 (1h 49min)',
+        sinopse: 'Um homem gentil tem sua vida transformada quando sua família é abalada por um ato de violência que machuca a todos. Em busca de justiça, ele se transforma em uma máquina mortífera, para conseguir fazer justiça com as próprias mãos.',
+        linkImagem: 'Acao/desejodematar.jpg',
+        linkFilme: ''
+    },{
+        titulo: 'A FREIRA ',
+        conteudo: 'Terror',
+        direcao: 'Corin Hardy',
+        dataLancamento: '6 de setembro de 2018 (1h 37min)',
+        sinopse: 'Presa em um convento na Romênia, uma freira comete suicídio. Para investigar o caso, o Vaticano envia um padre atormentado e uma noviça prestes a se tornar freira. Arriscando suas vidas, a fé e até suas almas, os dois descobrem um segredo profano e se confrontam com uma força do mal que toma a forma de uma freira demoníaca e transforma o convento num campo de batalha.',
+        linkImagem: 'Terror/afreira.jpg',
+        linkFilme: ''
     }
 ];
 
