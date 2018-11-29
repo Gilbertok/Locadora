@@ -7,7 +7,7 @@ var filmes = [
         sinopse: 'Aos 18 anos de idade, Jason é condenado a dez anos de prisão por posse de um pacote de drogas, embora não soubesse do conteúdo da embalagem. O pai do jovem começa a investigar e corre riscos quando um importante narcotraficante mexicano é exposto.',
         linkImagem: 'Acao/acordo.jpg',
         dataTarget: 'trailer_o_acordo',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'LOGAN ',
         conteudo: 'Ação, Ficção científica',
@@ -16,7 +16,7 @@ var filmes = [
         sinopse: 'Em 2029, Logan (Hugh Jackman) ganha a vida como chofer de limousine para cuidar do nonagenário Charles Xavier (Patrick Stewart). Debilitado fisicamente e esgotado emocionalmente, ele é procurado por Gabriela (Elizabeth Rodriguez), uma mexicana que precisa da ajuda do ex-X-Men para defender a pequena Laura Kinney / X-23 (Dafne Keen). Ao mesmo tempo em que se recusa a voltar à ativa, Logan é perseguido pelo mercenário Donald Pierce (Boyd Holbrook), interessado na menina.',
         linkImagem: 'Acao/logan.jpg',
         dataTarget: 'trailer_logan',
-        linkFilme: ''
+        linkFilme: 'logan.mp4'
     },{
         titulo: 'DESEJO DE MATAR ',
         conteudo: 'Ação',

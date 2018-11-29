@@ -4,6 +4,9 @@ $('.carousel').carousel({
 
 $('.modal').on('hidden.bs.modal', function () {
     video = $(this).closest("div").find('video')[0];
+
+    console.log(video);
+
     if(video != undefined) {
         video.pause();
         video.currentTime = 0;
@@ -17,11 +20,42 @@ $('.modal').on('shown.bs.modal', function () {
     }
 })
 
+$("#login").click(function() {
+    login();
+});
+
+function onKeyPresLogin(event) {
+    if(event.keyCode == 13) {
+        login();
+    }
+}
+
+function onKeyPresSenha(event) {
+    if(event.keyCode == 13) {
+        alterarSenha();
+    }
+}
+
+function login() {
+    var usuario = document.getElementById("loginUsuario").value;
+    var senha = document.getElementById("loginSenha").value;
+    UserJs.login(usuario, senha);
+}
+
 function logoff() {
     DataBase.logoff();
     location.reload();
 }
 
+function alterarSenhaModal() {
+    $("#modal_alterar_senha").modal();
+}
+
+function alterarSenha() {
+    var senhaAtual = document.getElementById("loginSenhaAtual").value;
+    var senhaNova = document.getElementById("loginSenhaNova").value;
+    UserJs.alterarSenha(senhaAtual, senhaNova);
+}
 
 IndexJS = {};
 
@@ -166,8 +200,8 @@ IndexJS.carregarMenu = function (params) {
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <button type="button" id="logoff" onclick="logoff()" class="btn btn-info">Cadastrar um filme</button>
-                                    <button type="button" id="logoff" onclick="logoff()" class="btn btn-info">Alterar Senha</button>
+                                    <button type="button" onclick="logoff()" class="btn btn-info">Cadastrar um filme</button>
+                                    <button type="button" onclick="alterarSenhaModal()" class="btn btn-info">Alterar Senha</button>
                                     <button type="button" id="logoff" onclick="logoff()" class="btn btn-danger fa-pull-right">Logoff</button>
                                 </li>
                             </ul>
@@ -236,8 +270,12 @@ IndexJS.carregarMenu = function (params) {
                 </div>`;
                 menu+=`<div class="row">${IndexJS.getCardFilmes()}</div>`;
     }
-    indexCarrossel.innerHTML = carrousel;
-    indexMenu.innerHTML = menu;
+    if (indexCarrossel!=undefined) {
+        indexCarrossel.innerHTML = carrousel;
+    }
+    if (indexMenu!=undefined) {
+        indexMenu.innerHTML = menu;
+    }
 }
 
 IndexJS.getCardFilmes = function () {
@@ -295,12 +333,13 @@ IndexJS.getCardFilmes = function () {
 }
 
 IndexJS.carregarFilmes = function (filmes) {
-    var main = document.getElementById('pages');
-    var paginas = '';
+    var pages = document.getElementById('pages');
+    var paginasTemplate = '';
+    var modaisTemplate = '';
     var pag = 1;
     filmes.forEach(filme => {
         if (parseInt(pag%2) == 0) {
-            paginas+=`<div class="row featurette">
+            paginasTemplate+=`<div class="row featurette">
                         <div class="col-md-7">
                             <h2 class="featurette-heading">${filme.titulo}<span class="text-muted">${filme.conteudo}</span></h2>
                             <h4 class="featurette-heading">Data de lançamento: <span class="text-muted">${filme.dataLancamento}</span></h4>
@@ -325,7 +364,7 @@ IndexJS.carregarFilmes = function (filmes) {
                     </div>
                     <hr class="featurette-divider">`
         } else {
-            paginas+=`<div class="row featurette">
+            paginasTemplate+=`<div class="row featurette">
                         <div class="col-md-5">
                             <img class="featurette-image img-fluid mx-auto" 
                                 data-src="holder.js/500x500/auto" 
@@ -350,15 +389,34 @@ IndexJS.carregarFilmes = function (filmes) {
                     </div>
                     <hr class="featurette-divider">`
         }
+        modaisTemplate+=`<div class="modal fade" id="${filme.dataTarget}" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content-video-locadora">
+                                    <div class="modal-header-video-locadora">
+                                        <h4 class="modal-title">${filme.titulo}</h4>
+                                        <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div id="video">
+                                        <video class="video-source" controls>
+                                            <source src="../assets/videos/${filme.linkFilme}" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="modal-footer-video-locadora">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+
         pag++
     });
 
-    main.innerHTML = `<div class="row loadGif">
+    pages.innerHTML = `<div class="row loadGif">
                         <img src="../assets/img/loader2.gif" style="width: 400px; height: 400px;" alt="Banner" />
                     </div>`
 
     setTimeout(function(){
-            main.innerHTML = paginas;
+            pages.innerHTML = paginasTemplate + modaisTemplate;
         }, 
         1500
     )

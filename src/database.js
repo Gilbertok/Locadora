@@ -4,14 +4,10 @@ var usersList = JSON.parse(localStorage.getItem(baseUser)) || [];
 var loginUser = JSON.parse(localStorage.getItem(baseLogin)) || {};
 
 DataBase = {};
-DataBase.getUser = function(searchTerm, advancedFilter) {
+DataBase.getUser = function(username) {
     advancedFilter = advancedFilter || {};
     return usersList.filter(function(user) {
-        return user.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            user.descricao.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                user.habilidades.some(function(h) {
-                    return h.nome.toLowerCase().includes(searchTerm)
-                });
+        return user.username.toLowerCase() === username;
     });
 }
 

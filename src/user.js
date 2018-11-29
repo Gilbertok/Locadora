@@ -10,6 +10,20 @@ UserJs.login = function(usuario, senha) {
     }
 }
 
+UserJs.alterarSenha = function(senhaAtual, senhaNova) {
+    var user = DataBase.verificaUsuarioLogado();
+    if (senhaAtual != senhaNova) {
+        if(user != undefined && user.password == senhaAtual) {
+            user.password = senhaNova;
+            DataBase.addUser(user);
+            IndexJS.messageSuccesso('Senha Alterada com Sucesso!');
+            $("#modal_alterar_senha").hide();
+        }
+    } else {
+        IndexJS.messageError('Nova senha precisa ser diferente da Atual!');
+    }
+}
+
 $("#salvarUsuario").click(function() {
     var username = document.getElementById("cadastroUsuario").value;
     var nome = document.getElementById("cadastroNomeCompleto").value;
@@ -32,10 +46,3 @@ $("#salvarUsuario").click(function() {
         1500
     );
 });
-
-$("#login").click(function() {
-    var usuario = document.getElementById("loginUsuario").value;
-    var senha = document.getElementById("loginSenha").value;
-    UserJs.login(usuario, senha);
-});
-
