@@ -25,7 +25,7 @@ var filmes = [
         sinopse: 'Um homem gentil tem sua vida transformada quando sua família é abalada por um ato de violência que machuca a todos. Em busca de justiça, ele se transforma em uma máquina mortífera, para conseguir fazer justiça com as próprias mãos.',
         linkImagem: 'Acao/desejodematar.jpg',
         dataTarget: 'trailer_desejo_de_matar',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'O PASSAGEIRO ',
         conteudo: 'Suspense, Ação',
@@ -34,7 +34,7 @@ var filmes = [
         sinopse: 'Durante o seu trajeto usual de volta para casa, um vendedor de seguros (Liam Neeson) é forçado por uma estranha misteriosa (Vera Farmiga) a descobrir a identidade de um dos passageiros do trem em que se encontra antes da última parada. Com a rotina quebrada, o homem se encontra no meio de uma conspiração criminosa.',
         linkImagem: 'Acao/passageiro.jpg',
         dataTarget: 'trailer_o_passageiro',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'DUPLA EXPLOSIVA ',
         conteudo: 'Ação',
@@ -43,7 +43,7 @@ var filmes = [
         sinopse: 'O principal guarda-costas do mundo possui um novo cliente: um assassino de aluguel que precisa testemunhar na Corte Internacional de Justiça. Por anos eles estavam em lados opostos de um tiro, mas agora eles estão presos juntos. Eles precisam colocar as diferenças de lado para chegarem ao julgamento a tempo.',
         linkImagem: 'Acao/duplaexplosiva.jpg',
         dataTarget: 'trailer_dupla_explosiva',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'ALEM DA ESCURIDÃO ',
         conteudo: 'Ação, Ficção científica',
@@ -52,7 +52,7 @@ var filmes = [
         sinopse: 'Em uma cidade pequena onde todos se conhecem, há rumores de que a casa de um dos moradores é assombrada. Quando um grupo de jovens decide investigar, são surpreendidos por Ely (Dennis Quaid), o proprietário, que mata um deles. Logo, os outros tentam provar o crime mas como Ely é um cidadão respeitado na cidade, ninguém acredita neles e o homem passa a persegui-los. Como eles poderão revelar que há um psicopata à espreita? ',
         linkImagem: 'Acao/escuridao.jpg',
         dataTarget: 'trailer_alem_da_escuridao',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'THE FOREIGNER ',
         conteudo: 'Ação',
@@ -61,7 +61,7 @@ var filmes = [
         sinopse: 'Quan (Jackie Chan) é dono de um típico restaurantes chinês em Londres, capital da Inglaterra. Após um misterioso ataque de um grupo de terroristas irlandeses ao seu estabelecimento, ele tem sua vida e família devastadas. Sem muito apoio da polícia local, ele vai buscar vingança com suas próprias mãos.',
         linkImagem: 'Acao/foreigner.jpg',
         dataTarget: 'trailer_the_forigner',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     },{
         titulo: 'LINHA DE AÇÃO ',
         conteudo: 'Ação, Policial, Suspense',
@@ -70,7 +70,7 @@ var filmes = [
         sinopse: 'Um ex-policial é envolvido em um escândalo após ser chamado pelo prefeito de Nova York para seguir a esposa do político que desconfia de infidelidade da mulher. Ao perceber que foi enganado, o detetive sai em busca de justiça.',
         linkImagem: 'Acao/linhaacao.jpg',
         dataTarget: 'trailer_linha_de_acao',
-        linkFilme: ''
+        linkFilme: '/oacordo.mp4'
     }
 ];
 

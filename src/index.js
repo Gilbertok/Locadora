@@ -42,6 +42,7 @@ function login() {
     UserJs.login(usuario, senha);
 }
 
+
 function logoff() {
     DataBase.logoff();
     location.reload();
