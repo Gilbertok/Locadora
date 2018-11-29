@@ -5,7 +5,7 @@ var filmes = [
         dataLancamento: ' 27 de setembro de 2018 (2h 02min)',
         direcao: 'Alvaro Brechner',
         sinopse: 'Durante a ditadura militar no Uruguai, José Mujica, que viria a se tornar um dos mais admirados presidentes sul-americanos de todos os tempos, (Antonio de la Torre), Mauricio Rosencof (Chino Darin) e Eleuterio Fernández Huidobro (Alfonso Tort) são presos e juntos enfrentaram uma verdadeira jornada de sobrevivência. Confinados e torturados por mais de 12 anos, sobreviveram às condições mais adversas em nome de suas ideologias.',
-        linkImagem: 'Drama/dramaumanoitededozeanos.jpg',
+        linkImagem: 'Drama/dozeanos.jpg',
         dataTarget: 'trailer_uma_noite',
         linkFilme: ''
     },{
